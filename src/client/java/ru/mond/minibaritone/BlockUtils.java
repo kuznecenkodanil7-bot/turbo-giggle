@@ -100,14 +100,13 @@ public final class BlockUtils {
         ClientPlayerEntity player = client.player;
         if (player == null) return false;
 
-        int selected = player.getInventory().selectedSlot;
-        ItemStack selectedStack = player.getInventory().getStack(selected);
+        ItemStack selectedStack = player.getMainHandStack();
         if (isUsablePlaceStack(selectedStack)) return true;
 
         for (int slot = 0; slot < 9; slot++) {
             ItemStack stack = player.getInventory().getStack(slot);
             if (isUsablePlaceStack(stack)) {
-                player.getInventory().selectedSlot = slot;
+                player.getInventory().setSelectedSlot(slot);
                 return true;
             }
         }

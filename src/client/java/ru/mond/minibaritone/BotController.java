@@ -260,7 +260,7 @@ public final class BotController {
     }
 
     private void updateStuckState(ClientPlayerEntity player) {
-        Vec3d current = player.getPos();
+        Vec3d current = new Vec3d(player.getX(), player.getY(), player.getZ());
         if (current.squaredDistanceTo(lastPosition) < 0.0009) {
             stuckTicks++;
         } else {
