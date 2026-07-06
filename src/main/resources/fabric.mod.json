@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "minibaritone",
+  "version": "${version}",
+  "name": "MiniBaritone Fabric",
+  "description": "Small client-side pathfinding helper: goto, break ahead, block placement and tree mining.",
+  "authors": ["Mond", "ChatGPT"],
+  "contact": {},
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "ru.mond.minibaritone.MiniBaritoneClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.17.0",
+    "fabric-api": "*",
+    "minecraft": "~1.21.11",
+    "java": ">=21"
+  }
+}
